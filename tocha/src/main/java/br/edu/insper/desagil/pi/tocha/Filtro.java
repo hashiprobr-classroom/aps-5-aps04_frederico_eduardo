@@ -8,7 +8,7 @@ public class Filtro {
     }
 
     public Imagem aplicacao(Imagem imagem, double[][] kernel) {
-        // inicializa saída
+
 
         int[][] entrada = imagem.getPixels();
 
@@ -24,7 +24,7 @@ public class Filtro {
 
         int[][] saida = new int[altura - 2][largura - 2];
 
-        // calcula saída
+
 
         for (int y = 1; y < altura - 1; y++) {
             for (int x = 1; x < largura - 1; x++) {
@@ -46,7 +46,7 @@ public class Filtro {
 
         if (tipo.equals("media")) {
 
-            // inicializa kernel
+
             kernel[0][0] = 0.111111;
             kernel[0][1] = 0.111111;
             kernel[0][2] = 0.111111;
@@ -59,7 +59,7 @@ public class Filtro {
 
         } else if (tipo.equals("sobel_x")) {
 
-            // inicializa kernel
+
             kernel[0][0] = -1;
             kernel[0][1] = 0;
             kernel[0][2] = 1;
@@ -72,7 +72,7 @@ public class Filtro {
 
         } else if (tipo.equals("sobel_y")) {
 
-            // inicializa kernel
+
             kernel[0][0] = -1;
             kernel[0][1] = -2;
             kernel[0][2] = -1;
